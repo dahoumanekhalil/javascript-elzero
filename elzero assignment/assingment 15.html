@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>94 => 101</title>
+
+
+    <!-- <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .assign {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .assign input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+        }
+        .assign input:focus {
+            outline: none;
+            border-color: #ccc;
+        }
+        .assign [title="Current"] {
+            padding: 20px;
+            margin: 10px auto;
+            width: 610px;
+            background-color: #f1f0f0;
+        }
+        .assign .classes-list {
+            padding: 20px;
+            margin: 10px auto;
+            width: 610px;
+            background-color: #f1f0f0;
+        }
+        .assign .classes-list h5 {
+            margin: 0 0 10px;
+            text-align: left;
+        }
+        .assign .classes-list div span {
+            background-color: #ff5722;
+            padding: 6px 10px 8px;
+            margin-right: 5px;
+            border-radius: 6px;
+            color: white;
+            display: inline-flex;
+        }
+    </style> -->
+
+
+    <script>
+        // window.onload = function() {
+        //     let links = document.querySelectorAll("a")
+        //     for(let i = 0; i < links.length; i++){
+        //         if(links[i].classList.contains("open")){
+        //             if(links[i].innerHTML.toLowerCase() === "elzero"){
+        //                 console.log(links[i])
+        //             }
+        //         }
+        //     }
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        // document.querySelector("p").remove();
+        //     let ourElement = document.querySelector('div');
+        //     let starts = document.createElement("div");
+        //     starts.className = "start";
+        //     starts.setAttribute("title","Start Element");
+        //     starts.setAttribute("data-value","Start");
+        //     starts.innerHTML = "Start";
+        //     let ends = starts.cloneNode();
+        //     document.body.prepend(starts);
+        //     ends.className = "end";
+        //     ends.setAttribute("title","End Element");
+        //     ends.setAttribute("data-value","End");
+        //     ends.innerHTML = "End";
+        //     ourElement.after(ends);
+        
+        
+        ///////////////////////////////////////////////////////////////////////
+        
+        // let finding = document.querySelector("span");
+        // console.log(finding.nextSibling.nextSibling.nextSibling)
+        
+        
+        ///////////////////////////////////////////////////////////////////////
+        
+        // document.addEventListener("click", function(e) {
+        //     console.log(e.target.tagName)
+        // })
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let textAdd = document.getElementById('add');
+        // let textRemove = document.querySelector('[placeholder="Remove Classes"]');
+        // let newtext = document.querySelector('[class="classes-list"] div');
+
+        // textAdd.addEventListener("change", function() {
+        //     let countadd = newtext.children.length 
+        //     let words = textAdd.value.split(" ")
+        //     meanloop: for(let i = 0; i < words.length; i++) {
+        //         if(words[i] === "") {
+        //             continue meanloop;
+        //         }
+        //             nistedloop: for(let j = 0 ;j < countadd; j++) {
+        //                 if(words[i].toLowerCase() === newtext.children[j].innerHTML.toLowerCase()) {
+        //                     console.log(`this element ${words[i].toLowerCase()} is already exist`)
+        //                     continue meanloop;
+        //                 }
+        //             }
+        //         let span = document.createElement("span");
+        //         span.innerHTML = `${words[i].toLowerCase()}`
+        //         newtext.appendChild(span)
+        //     }
+        // })
+
+        // textRemove.addEventListener("change", function() {
+        //     let countRemove = newtext.children.length 
+        //     let wordsRemove = textRemove.value.split(" ")
+        //     meanloop: for(let i = 0; i < wordsRemove.length; i++) {
+        //         if(wordsRemove[i] === "") {
+        //             continue meanloop;
+        //         }
+        //         nistedloop: for(let j = 0 ;j < countRemove; j++) {
+        //             if(wordsRemove[i].toLowerCase() === newtext.children[j].innerHTML) {
+        //                 newtext.children[j].remove()
+        //                 continue meanloop;
+        //             } else {
+        //                 console.log(`this child ${newtext.children[j].innerHTML.toLowerCase()} is not in our elements `)
+        //                 continue meanloop;
+        //             }
+        //         }
+        //     }            
+        // })
+
+        // }
+    </script>
+</head>
+<body>
+    <!-- <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a> -->
+
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <div class="our-element">Our Element</div>
+    <p>Paragraph</p> -->
+
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <div>
+        <span>Hello</span> -->
+        <!-- We Need The Next Text Without Spaces -->
+        <!-- Elzero
+    </div> -->
+
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <div>div</div>
+    <span>span</span>
+    <p>paragraph</p>
+    <article>article</article>
+    <section>section</section> -->
+
+    <!-- ////////////////////////////////////// -->
+
+    <!-- <div class="assign">
+        <input id="add" type="text" class="classes-to-add" placeholder="Add Classes" />
+        <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
+        <div class="element current" title="Current">Current Element</div>
+        <div class="classes-list">
+            <h5>Current Element Class Lists</h5>
+            <div></div>
+        </div>
+    </div> -->
+
+    <script>
+        //////////\\\\\\\\\\ Header HTML //////////\\\\\\\\\\
+        // let divHeader = document.createElement("header");
+        // divHeader.classList.add("website-head");
+        // document.body.prepend(divHeader);
+        // let header1 = document.querySelector('.website-head');
+        // header1.prepend(document.createElement('div'));
+        // header1.children[0].classList.add("headerDiv");
+        // header1.children[0].prepend(document.createElement('h2'));
+        // header1.children[0].append(document.createElement("ul"));
+        // let headerH2 = header1.children[0].children[0];
+        // let headerUl1 = header1.children[0].children[1];
+        // headerH2.classList.add("logo");
+        // headerUl1.classList.add("menu");
+        // headerH2.innerHTML = "Elzero";
+        // for(let i = 0; i < 4; i++) {
+        //     headerUl1.append(document.createElement("li"));
+        //     headerUl1.children[i].appendChild(document.createElement("a"));
+        //     headerUl1.children[i].children[0].setAttribute("href","#");
+        //     headerUl1.children[i].classList.add("header-ul-li", `header-ul-li${i}`);
+        //     headerUl1.children[i].style.cssText = `
+        //         margin: auto 10px;
+        //     `
+        //     headerUl1.children[i].children[0].style.cssText = `
+        //         text-decoration: none;
+        //         font-size: 18px;
+        //         font-weight: 700;
+        //         color: rgb(53, 53, 53);
+        //     `
+        //     switch (i) {
+        //         case 0:
+        //         headerUl1.children[i].children[0].innerHTML = "Home";
+        //         break;
+        //         case 1:
+        //         headerUl1.children[i].children[0].innerHTML = "About";
+        //         break;
+        //         case 2:
+        //         headerUl1.children[i].children[0].innerHTML = "Service";
+        //         break;
+        //         case 3:
+        //         headerUl1.children[i].children[0].innerHTML = "Contact";
+        //         break;
+        //     };
+        // };
+        // console.log(headerUl1);
+
+        //////////////////// Header CSS ////////////////////
+
+        // document.body.style.cssText =`
+        //     margin: 0;
+        //     padding: 0;
+        //     font-family: tahoma,arial;
+        // `
+        // divHeader.style.cssText= `    
+        //     height: 70px;
+        //     width: 100%;
+        // `
+        // header1.children[0].style.cssText = `
+        //     display: flex;
+        //     justify-content: space-between;
+        //     margin: auto 40px;
+        //     height: 100%; 
+        // `
+        // header1.children[0].firstChild.style.cssText = `
+        //     color: rgb(5, 191, 185);
+        //     font-size: 35px;
+        //     margin: auto 0;
+        // `
+        // header1.children[0].lastChild.style.cssText = `
+        // list-style: none;
+        // display: flex;
+        // `
+        // headerUl1.children[0].style.cssText = `
+        // margin: auto 10px;
+        // `
+
+        //////////\\\\\\\\\\ feed HTML //////////\\\\\\\\\\
+
+        // let content = document.createElement("div");
+        // content.classList.add("content");
+        // divHeader.after(content);
+        // for (let i = 0; i < 15; i++) {
+        //     console.log(i);
+        //     let card = document.createElement("div");
+        //     card.style.cssText = `
+        //         background-color: rgb(255, 255, 255);
+        //         width: 330px;
+        //         height: 140px;
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: space-around;
+        //         text-align: center;
+        //         font-size: 30px;
+        //         border-radius: 20px;
+        //         color: rgb(76, 76, 76);
+        //     `
+        //     let cardH3 = document.createElement("span");
+        //     cardH3.style.cssText = `
+        //         font-size: 40px;
+        //         font-weight: 700;
+        //         line-height: 1;
+        //         padding: 0;
+        //         margin: 0;
+        //     `
+        //     card.appendChild(cardH3);
+        //     content.append(card);
+        //     card.classList.add("cards",`card-${i+1}`);
+        //     cardH3.classList.add("cardNum",`cardNum-${i+1}`);
+        //     let textCard = document.createTextNode(`${i+1}`);
+        //     let textText = document.createTextNode(`product`);
+        //     cardH3.appendChild(textCard);
+        //     card.append(textText);
+        // }
+
+        //////////\\\\\\\\\\ feed CSS //////////\\\\\\\\\\
+
+        // content.style.cssText = `
+        //     background-color: rgba(158, 158, 158, 0.184);
+        //     display: grid;
+        //     grid-template-columns: auto auto auto;
+        //     gap:10px;
+        //     padding: 10px;
+        //     justify-content: space-around;
+        // `
+
+        //////////\\\\\\\\\\ footer HTML //////////\\\\\\\\\\
+        
+        // let footer = document.createElement("footer");
+        // footer.classList.add("footer");
+        // content.after(footer);
+        // footer.innerHTML = "Copyright2022"
+
+        //////////\\\\\\\\\\ footer CSS //////////\\\\\\\\\\
+
+        // footer.style.cssText = `
+        // background-color: rgb(7, 153, 148);
+        //     height: 112px;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     color: white;
+        //     font-size: 20px;
+        //     font-weight: 700;
+        // `
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Open+Sans:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="test.css">
+    <title>111 => 114</title>
+</head>
+<body>
+                <!-- [112]
+    <ul>
+        <li data-color="red" class="active"></li>
+        <li data-color="green"></li>
+        <li data-color="black"></li>
+        <li data-color="blue"></li>
+    </ul>
+    <div class="main"></div>-->
+
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+    
+    <!-- <div class="container">
+        <div class="form">
+            <input type="text" class="input">
+            <input type="submit" class="add" value="Add Task">
+        </div>
+        <div class="tasks">
+        </div>
+    </div> -->
+    
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+
+    <!-- <select class="fonts">
+        <option value="Roboto" selected>Roboto</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Open">Open Sans</option>
+    </select>
+
+    <select class="color">
+        <option value="black" selected>black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="pink">pink</option>
+
+    </select>
+
+    <select class="size">
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27" selected>27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+    </select>
+    <div class="mainText">
+        this assinment from alzero web school for testing our work
+    </div> -->
+
+    <!-- /////////////////////////////////////////////////////////////////////// -->
+
+    <!-- <input type="text" placeholder="testing">
+    <input type="text" placeholder="testing">
+    <input type="text" placeholder="testing">
+    <select name="" id="">
+        <option value="text" selected>text</option>
+        <option value="email">email</option>
+        <option value="password">password</option>
+        <option value="number">number</option>
+        <option value="date">date</option>
+    </select> -->
+
+    <script src="test.js"></script>
+
+    <script> 
+                // [112]
+
+        // let lis = document.querySelectorAll("ul li");
+        // let div = document.querySelector("div")
+
+        // if(localStorage.getItem("color")) {
+        //     div.style.cssText = `background-color: ${localStorage.getItem("color")}`
+        //     lis.forEach((e) => {
+        //         e.classList.remove("active");
+        //         document.querySelector(`[data-color="${localStorage.getItem("color")}"]`).classList.add("active")
+        //     })
+        // }
+        // lis.forEach( (ele) => {
+        //     ele.addEventListener("click",(e) => {
+        //         lis.forEach((e) => {
+        //             e.classList.remove("active")
+        //         })
+        //         e.currentTarget.classList.add("active")
+        //         window.localStorage.setItem("color", e.currentTarget.dataset.color)
+        //         div.style.cssText = `background-color: ${localStorage.getItem("color")}`
+        //     });
+        // });
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        // TODO LIST 
+
+        // let textInput = document.querySelector('[type="text"]');
+        // let submitInput = document.querySelector('[type="submit"]');
+        // let tasks = document.querySelector('[class="tasks"]');
+
+        // // create new empty array 
+        // let arrayOfTasks =[];
+
+        // // check if there is data in locale storage 
+        // if(localStorage.getItem("tasks")) {
+        //     arrayOfTasks = JSON.parse(localStorage.getItem("tasks"))
+        // };
+
+        // // use function to create data from local storage 
+        // getTasksFromLocalStorage();
+
+        // // to make save our data in new array 
+        // submitInput.addEventListener("click", () => {
+        //     if(textInput !== ""){
+        //         addTaskToArray(textInput.value);
+        //         textInput.value = "";
+        //     }
+        // })
+
+        // // click on delete in main tasks 
+        // tasks.addEventListener("click", (e)=> {
+        //     if(e.target.classList.contains("delete")) {
+        //         deleteTask(e.target.parentElement.getAttribute("data-id"));
+
+        //         e.target.parentElement.remove()
+        //     };
+
+        //     if(e.target.classList.contains("todo")){
+        //         updateTasks(e.target.getAttribute("data-id"));
+        //         e.target.classList.toggle("done");
+        //         checkComplited()
+        //     }
+
+            
+        // })
+
+        // // function add data to aray 
+        // function addTaskToArray (text){
+        //     const task = {
+        //         id: Date.now(),
+        //         title: text,
+        //         completed: false
+        //     };
+        //     arrayOfTasks.push(task)
+        //     // console.log(arrayOfTasks)
+        //     addTasksToMainPage(arrayOfTasks)
+        //     // set task in local storage
+        //     addTasksToLocalStorage(arrayOfTasks)
+
+        // };
+
+        // // function create elements in html
+        // function addTasksToMainPage (tasksList){
+        //     tasks.innerHTML = "";
+        //     tasksList.forEach((task) => {
+        //         // create new div 
+        //         let newDiv = document.createElement("div");
+        //         newDiv.className = "todo";
+        //         newDiv.setAttribute("data-id", task.id);
+        //         // check if task coomplet
+        //         if(task.completed) {
+        //             newDiv.className = "todo done";
+        //         }
+        //         // create title of tasks
+        //         let newSpan = document.createElement("span");
+        //         newSpan.appendChild(document.createTextNode(task.title));
+        //         // create delete button 
+        //         let newButton = document.createElement("button");
+        //         newButton.className = "delete";
+        //         newButton.appendChild(document.createTextNode("Delete X"));
+        //         // making div
+        //         newDiv.appendChild(newSpan);
+        //         newDiv.appendChild(newButton);
+        //         tasks.appendChild(newDiv);
+        //     });
+        // }
+            
+        // // function to add tasks to local storage 
+        // function addTasksToLocalStorage (array) {
+        //     localStorage.setItem("tasks", JSON.stringify(array))
+        // }
+
+        // // function to create new items from local storage
+        // function getTasksFromLocalStorage () {
+        //     let data = localStorage.getItem("tasks")
+        //     if(data) {
+        //         let tasks = JSON.parse(data);
+        //         addTasksToMainPage(tasks)
+        //     }
+        // }
+
+        // // function for delete items from locale storage
+        // function deleteTask(ID) {
+        //     arrayOfTasks = arrayOfTasks.filter((tasks) => tasks.id != ID);
+        //     addTasksToLocalStorage(arrayOfTasks)
+        // }
+
+        // function updateTasks (ID) {
+        //     for(let i = 0; i < arrayOfTasks.length; i++) {
+        //         if(arrayOfTasks[i].id == ID) {
+        //             arrayOfTasks[i].completed == false ? arrayOfTasks[i].completed = true : arrayOfTasks[i].completed = false ;
+        //         }
+        //     }
+        //     addTasksToLocalStorage(arrayOfTasks)
+        // }
+
+        // function checkComplited () {
+        //     let checkingCounter = 0;
+            
+        //     for(let i = 0; i < arrayOfTasks.length; i++) {
+        //         if(arrayOfTasks[i].completed == true) {
+        //             checkingCounter++;
+        //         }
+        //     }
+        //     setTimeout(function() {
+        //         if (checkingCounter == arrayOfTasks.length) {
+        //             if(checkingCounter == arrayOfTasks.length) {
+        //                 localStorage.clear();
+        //                 tasks.innerHTML = "";
+        //                 arrayOfTasks = []
+        //             }
+        //         }
+        //     },700)
+            
+        // }
+
+        // /////////////////////////////// STOP ///////////////////////////////
+        // /////////////////////////////// STOP ///////////////////////////////
+        // /////////////////////////////// STOP ///////////////////////////////
+        // /////////////////////////////// STOP ///////////////////////////////
+
+        // // if(localStorage.length >= 1){
+        // //     for(let i = 0; i < localStorage.length; i++){
+        // //         let newDiv = document.createElement("div");
+        // //         newDiv.className = "todo";
+        // //         let newSpan = document.createElement("span");
+        // //         newDiv.className = "todo";
+        // //         newSpan.innerHTML = localStorage.getItem(localStorage.key(i))
+        // //         newDiv.appendChild(newSpan)
+        // //         let newButton = document.createElement("button");
+        // //         newButton.innerHTML = "Delete X";
+        // //         newDiv.append(newButton)
+        // //         tasks.append(newDiv)
+        // //     }
+        // // }
+
+        // // if(localStorage.length >= 1){
+        // //     for(let i = 0; i < localStorage.length; i++){
+        // //         let newDiv = document.createElement("div");
+        // //         newDiv.className = "todo";
+        // //         let newSpan = document.createElement("span");
+        // //         newDiv.className = "todo";
+        // //         newSpan.innerHTML = localStorage.getItem(localStorage.key(i))
+        // //         newDiv.appendChild(newSpan)
+        // //         let newButton = document.createElement("button");
+        // //         newButton.innerHTML = "Delete X";
+        // //         newDiv.append(newButton)
+        // //         tasks.append(newDiv)
+        // //     }
+        // // }
+
+        // // // for create new element in local storage
+
+        // //     submitInput.addEventListener("click", (e) => {
+        // //         let newTextInputSplit = textInput.value.split(" ");
+        // //         let newTextInput = newTextInputSplit.reduce(function(acc,cur){
+        // //             if(cur === "") {
+        // //                 return `${acc}`;
+        // //             } else {
+        // //                 return `${acc} ${cur}`;
+        // //             }
+        // //         })
+        // //         console.log(newTextInput);
+        // //         localStorage.setItem(`text ${localStorage.length}`, newTextInput);
+        // //         // for creat new element in tasks list
+                
+        // //             let newDiv = document.createElement("div");
+        // //             newDiv.className = "todo";
+        // //             let newSpan = document.createElement("span");
+        // //             newDiv.className = "todo";
+        // //             newSpan.innerHTML = localStorage.getItem(localStorage.key(i))
+        // //             newDiv.appendChild(newSpan)
+        // //             let newButton = document.createElement("button");
+        // //             newButton.innerHTML = "Delete X";
+        // //             newDiv.append(newButton)
+        // //             tasks.append(newDiv)
+                
+        // //     })
+            
+        // //     let deleted = document.querySelectorAll(".todo button")
+
+        // //     // for delete element from local storage list 
+            
+        // //     deleted.forEach((ele) => {
+        // //         ele.addEventListener("click", (e) => {
+        // //             console.log("hey")
+        // //             console.log(localStorage.getItem(localStorage.key(0)))
+        // //             console.log(e.currentTarget.previousSibling.innerHTML)
+        // //             for(let i = 0; i < localStorage.length; i++) {
+        // //                 if(e.currentTarget.previousSibling.innerHTML === localStorage.getItem(localStorage.key(i))){
+        // //                     localStorage.removeItem(localStorage.key(i))
+        // //                     continue ;
+        // //                 } else if(i === localStorage - 1) {
+        // //                     console.log("thar is no item like that in local storage")
+        // //                     continue ;
+        // //                 } else {
+        // //                     continue;
+        // //                 }
+        // //             }
+        // //             e.currentTarget.parentElement.remove()
+        // //         })
+        // //     });
+
+        // //     localStorage.key(0)
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        // let opt1 = document.querySelector('[class="fonts"]')
+        // let opt2 = document.querySelector('[class="color"]')
+        // let opt3 = document.querySelector('[class="size"]')
+        // let maintext = document.querySelector('[class="mainText"]')
+        // let select = document.querySelectorAll('body select')
+        // let fonts = [];
+        // console.log(select)
+        // if(localStorage.length == 3) {
+            //     fonts = {
+                //         type: localStorage.getItem("name"),
+                //         color: localStorage.getItem("color"),
+                //         size: localStorage.getItem("size")
+        //     }
+        //     valuiesOfOpt (fonts)
+            
+        // } else if (localStorage.length == 0) {
+        //     fonts = {
+        //         type: opt1.value,
+        //         color: opt2.value,
+        //         size: opt3.value
+        //     }
+        // }
+        
+        
+        // document.body.addEventListener("change", () => {
+            // chooseFonts(opt1.value , opt2.value, opt3.value)
+            // })
+            
+            // setproperties(fonts)
+            
+            // function chooseFonts (fontName, fontColor, fontSize) {
+            //     const font = {
+            //         type: fontName,
+            //         color: fontColor,
+            //         size: fontSize
+            // }
+            
+            //     localeProperties (font)
+            // }
+            
+            // function setproperties (ele) {
+            //     maintext.style.cssText = `
+            //     font-family: '${ele.type}',sans-serif;
+            //     font-size: ${ele.size}px;
+            //     color: ${ele.color};`
+            // }
+            
+            // function localeProperties (ele) {
+            //     localStorage.setItem("name", ele.type)
+            //     localStorage.setItem("color",ele.color)
+            //     localStorage.setItem("size",ele.size)
+            // }
+            
+            // function valuiesOfOpt (ele) {
+            //     opt1.value = ele.type;
+            //     opt2.value = ele.color;
+            //     opt3.value = ele.size
+            // }
+            
+        ///////////////////////////////////////////////////////////////////////
+
+        // let inputd = document.querySelectorAll("input");
+        // let opt = document.querySelector("select")
+        // let check ="";
+
+        // console.log(sessionStorage.getItem("check"))
+        // if(sessionStorage.getItem("check")) {
+        //     check = sessionStorage.getItem("check")
+        //     opt.value = check
+        //     inputChanges ()
+        // } 
+
+        // opt.addEventListener("change", () => {
+        //     check = opt.value
+        //     sessionStorage.setItem("check",check)
+        //     inputChanges ()
+        // })
+
+        // function inputChanges() {
+        //     for(let i = 0; i < 3 ; i++){
+        //         inputd[i].value = ""
+        //         inputd[i].setAttribute('type', check)
+
+        //     }
+        // }
+
+
+    </script>
+    
+</body>
+</html>

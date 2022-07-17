@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64 => 70</title>
+</head>
+<body> 
+    
+    <script>
+        let name = (...names) => (`String [${names.join("], [")}] => Done !`);
+        document.write(name("ahmed", "khalil", "mohamed" ,"dahoumane"));
+
+        ////////////////////////////////////////////////////////
+
+        let myNumbers =[20,50,10,60];
+
+        let calc = (one , two,...nums) => one + two + +nums;
+
+        console.log(myNumbers.length )
+        console.log(myNumbers.indexOf(50))
+        console.log(calc(10 ,20,myNumbers[+isNaN(NaN)]))
+
+        ////////////////////////////////////////////////////////
+        
+        function getDetails(zName, zAge,zCountry) {
+
+            function namePattern(zName) {
+                zName = zName.split(" ")
+                if(zName.length < 2){
+                    // console.log(zName)
+                    return `your name is just one index ${zName}`;
+                } else {
+                    // console.log(zName)
+                    zName[1] = zName[1][0].toUpperCase();
+                    return zName.join(" ");
+                }
+            }
+
+            function ageWithMessage(zAge) {
+                if(typeof(zAge) === "number") {
+                    return zAge;
+                } else {
+                    zAge = zAge.split(" ")
+                    for(let i = 0; i < zAge.length; i++){
+                        if(Number.isInteger(parseInt(zAge[i])) === true){
+                            return zAge[i];
+                        }
+                    }
+                }
+                return `age is numbers you must to write numbers`;
+            }
+            
+            function countryTwoLetters(zCountry) {
+                zCountry = zCountry.split("")
+                for(let i = 0; i < 2; i++){
+                    zCountry[i] = zCountry[i].toUpperCase();
+                }
+                return `you live in ${zCountry[0]}${zCountry[1]}`;
+            }
+
+            function fullDetails() {
+                return `Hello ${namePattern(zName)}., Your Age is ${ageWithMessage(zAge)}, you live in ${countryTwoLetters(zCountry)}.`;
+            }
+
+            return fullDetails();
+        }
+
+        console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+        
+        ////////////////////////////////////////////////////////
+        
+        let itsMe = _ => `Iam A Normal Function`;
+        document.write(itsMe());
+        
+        ////////////////////////////////////////////////////////
+        
+        let urlCreate = (protocol,web,tld) => `${protocol}://www.${web}.${tld}`;
+        document.write(urlCreate("https","rmm-agency","com"))
+        
+        ////////////////////////////////////////////////////////
+        
+        let checker = (zName) => {
+            return (status) => {
+                return (salary) => {
+                    return status === "Availlable" ? `${zName} , My salary Is ${salary} ` : `Iam Not Available`
+                };
+            };
+        };
+        console.log(checker("Osama")("Availlable")(4000));
+        console.log(checker("Ahmed")("Not Available")());
+        
+
+        ////////////////////////////////////////////////////////
+        
+        let sum = 0;
+        function specialMix (...data) {
+            if(data.length === 0) {
+                return `you must write a data`;
+            }else {
+                for (let i = 0; i < data.length; i++) {
+                    if(typeof(data[i]) === "number") {
+                        sum += data[i];
+                    } else if(typeof(data[i]) === "string") {
+                        if(Number.isInteger(parseInt(data[i])) === true) {
+                            sum += parseInt(data[i]);
+                        }else {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+                }
+            }
+            if(sum === 0){
+                return `All Is Strings`;
+            }else {
+                return sum;
+            }
+        }
+
+
+
+        console.log(specialMix(10, 20, 30)); // 60
+        console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+        console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+        console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48 => 56</title>
+</head>
+<body> 
+    
+
+    <script>
+        let myAdmins = ["Ahmed", "Osama", "Sayed", "//", "Samera"];
+        let myEmloyees = ["Amged", "Samah", "Ameer", "Omar","Othman", "Amany", "Samia"]
+        let check = myAdmins.indexOf("//")
+        myAdmins.sort();
+        myEmloyees.sort();
+        if (check === -1){
+            check = myAdmins.length;
+        }
+        document.write(`<div>We Have ${check} Admins </div>`);
+        document.write(`<hr>`);
+        mainLoop: for(let i = 0; i < check; i++){
+            document.write(`<div> The Admin For Team ${i + 1} Is ${myAdmins[i + 1]}.</div>`);
+            document.write(`<h1>Team Members</h1>`);
+            let u = 1;
+            nistedLoop: for(let j = 0; j < myEmloyees.length;j++) {
+
+                if (myAdmins[i + 1][0] != myEmloyees[j][0]){
+                    continue nistedLoop;
+                }
+                document.write(`<div> - ${u} ${myEmloyees[j]}</div><br>`)
+                u++
+            }
+            document.write(`<hr>`)
+        }
+
+
+        let start0 = 10;
+        let end0 = 100;
+        let exclude0 = 40; 
+        let start1 = 10;
+        let end1 = 0;
+        let stop1 = 3;
+        let start2 = 1;
+        let end2 = 6;
+        let breaker2 = 2;
+        let index = 10;
+        let jump = 2;
+        let end = 0;
+
+        console.log(start0)
+        for (let i = start0; i <= end0; i += start0){
+            console.log(i)
+        };
+
+        for (let i = start1; i >= stop1; i--){
+            console.log(i)
+        };
+
+        for(let i = start2; i <= end2; i++){
+            console.log(i);
+            for(let j = start2; j <= breaker;){
+                console.log(`-- ${j *= breaker2}`)
+            }
+        }
+    
+        end = jump * jump
+        let i = index;
+        for(;;){
+            console.log(i)
+            if(i <= end){
+                break;
+            }
+            i = i - jump
+        }
+
+        let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+        let letter = "a";
+        let endx = +(letter == friends);
+        for(let i = endx; i < friends.length; i++) {
+            if(friends[i][0] == letter.toUpperCase()){
+                continue;
+            }
+            endx = endx + +Array.isArray(friends)
+            console.log(`"${endx} => ${friends[i]}"`)
+        }
+
+        let result= [];
+        let start = 0;
+        let swappedName = "elZerO";
+        for (let i = 0; i < swappedName.length; i++){
+            if (swappedName[i]===swappedName[i].toUpperCase()){
+                result.push(swappedName[i].toLowerCase());
+            } else {
+                result.push(swappedName[i].toUpperCase());
+            }
+        }
+        console.log(result.join(""))
+        // another sulotion for this task 
+        // for (let i = 0; i < swappedName.length; i++){
+        //     if (swappedName[i]===swappedName[i].toUpperCase()) {
+        //     result+= swappedName[i].toLowerCase();
+        //     } else {
+        //     result+= swappedName[i].toUpperCase();
+        //     }
+        // }
+        // console.log(result)
+
+        let startx = 0;
+        let mix = [1, 2, 3, "A", "B", "C", 4];
+        for (let i = startx; i < mix.length; i++){
+            if ((typeof(mix[i]) == "string") || mix[i] == mix[startx]){
+                continue;
+            }
+            console.log(mix[i])
+        }
+
+        // while
+        let friendsx = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+        let indexx = 0;
+        let counter = 0;
+        let j = indexx;
+        while (counter < friendsx.length) {
+            if((typeof(friendsx[counter]) === 'number') || friendsx[counter][indexx] === ("a" && "A")){
+                counter++
+                continue;
+            }
+            j++;
+            console.log(`${j} => ${friendsx[counter]}`)
+            counter++
+        }
+
+    </script>
+</body>
+</html>

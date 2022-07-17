@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>86 => 93</title>
+</head>
+<body>
+
+    <!-- <div id="elzero" class="element" name="js">JavaScript</div> -->
+
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <div>
+        <img src="#1" alt="" />
+    </div>
+    
+    <div>
+        <img src="#2" alt="" />
+    </div>
+    
+    <div>
+        <img src="#3" alt="" />
+    </div>
+    
+    <div>
+        <img src="#4" alt="" />
+    </div>
+    
+    <div>
+        <img src="#5" alt="" />
+    </div>
+    
+    <div>
+        <img src="#6" alt="" />
+    </div>
+    
+    <div>
+        <img src="#7" alt="" />
+    </div>
+
+    <div>
+        <img src="#8" alt="" />
+    </div>
+
+    <div>
+        <img src="#9" alt="" />
+    </div>
+
+    <div>
+        <img src="#10" alt="" />
+    </div> -->
+    
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <form action="">
+        <input id="kha" type="number" name="dollar" placeholder="USD Dollar" />
+        <div id="dah" class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+    </form> -->
+    
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <div class="one" id="one" title="two">Two</div>
+        <div class="two" id="two" title="one">One</div> -->
+        
+    <!-- ////////////////////////////////////// -->
+    
+    <!-- <img src="#" alt="One" />
+        <img src="#" />
+        <img src="#" alt="Three" />
+        <img src="#" />
+        <img src="#" /> -->
+
+    <!-- ////////////////////////////////////// -->
+
+    <!-- <form action="">
+        <input type="number" name="elements" class="input" placeholder="Number Of Elements" />
+        <input type="text" name="texts" class="input" placeholder="Elements Text" />
+        <select name="type" class="input">
+            <option value="Div">div</option>
+            <option value="Section">section</option>
+        </select>
+        <input type="submit" name="create" value="Create" />
+        <div class="results">
+            
+        </div>
+    </form> -->
+    <script>
+//              [90]
+
+        // for(let i = 0; i < 100; i++){
+        //     let divElement = document.createElement("div");
+        //     let h3Element = document.createElement("h3");
+        //     let pElement = document.createElement("p");
+        //     let h3text = document.createTextNode(`hey guys this is h3 text!.`);
+        //     let ptext = document.createTextNode("hey guys this is paragraph text!.");
+        //     divElement.className = ("products");
+        //     divElement.appendChild(h3Element);
+        //     h3Element.appendChild(h3text);
+        //     divElement.appendChild(pElement);
+        //     pElement.appendChild(ptext);
+        //     document.body.appendChild(divElement)
+        // }
+        
+        ////////////////////////////////////////////////////////////
+
+                /*
+            // let kh1 = document.querySelector("div")
+            // let kh2 = document.querySelector(".element")
+            // let kh3 = document.querySelector("#elzero")
+            // let kh4 = document.getElementById("elzero")
+            // let kh5 = document.getElementsByClassName("element")
+            // let kh6 = document.getElementsByTagName("div")
+            // let kh7 = document.querySelectorAll("div")
+            // let kh8 = document.querySelectorAll(".element")
+            // let kh9 = document.querySelectorAll("#elzero")
+            // let kh10 = document.body.firstElementChild
+            // let kh11 = document.getElementsByName("js")
+            // console.log(kh1)
+            // console.log(kh2)
+            // console.log(kh3)
+            // console.log(kh4)
+            // console.log(kh5)
+            // console.log(kh6)
+            // console.log(kh7)
+            // console.log(kh8)
+            // console.log(kh9)
+            // console.log(kh10)
+            // console.log(kh11)
+        */
+
+        ///////////////////////////////////////////////////////////////////////
+
+        /*
+            let divImg = document.getElementsByTagName("div")
+            let img = document.getElementsByName("img")
+            for(let i = 0; i < 10; i++){
+                divImg[i].setAttribute("src", "https://elzero.org/wp-content/themes/elzero/imgs/logo.png")
+                divImg[i].setAttribute("alt", `Elzero Logo ${i+1}`)
+            }
+        */
+
+       ///////////////////////////////////////////////////////////////////////
+
+        /*
+            let dollar = document.getElementById("kha")
+            let usd = document.getElementsByClassName("result");
+            let usdt = document.getElementById("dah")
+        
+            dollar.addEventListener("change", () => {
+            usdt.innerHTML = `{${dollar.value}} USD Dollar = {${dollar.value * 15.6}} Egyptian Pound`;
+            });
+        */
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        /*
+            let one = document.getElementById("one");
+            let two = document.getElementById("two");
+
+            let xchange = one.innerText;
+            one.innerHTML = two.innerText;
+            two.innerHTML = xchange;
+        */
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        /*
+        let imgs = document.querySelectorAll("img")
+        for(let i = 0; i < imgs.length; i ++) {
+            if (imgs[i].hasAttribute("alt") == true) {
+                imgs[i].setAttribute("alt", "Old")
+            } else {
+                imgs[i].setAttribute("alt", "Elzero new")
+            }
+        }
+        */
+
+       ///////////////////////////////////////////////////////////////////////
+
+        /*
+            let form = document.querySelector("form")
+            let txt = document.querySelector('[name="texts"]');
+            let num = document.querySelector('[name="elements"]');
+            let typ = document.querySelector("form select");
+            let results = document.querySelector("form .results")
+            
+            form.onsubmit = function(e) {
+                e.preventDefault()
+                while(results.firstChild){
+                    results.removeChild(results.firstChild)
+                }
+
+                for (let i = 0; i < num.value; i++) {
+                    let testing = document.createElement(typ.value);
+                    testing.setAttribute("class", "box")
+                    testing.setAttribute("title","element")
+                    testing.setAttribute("id",`id-${i + 1}`)
+                    testing.innerHTML = txt.value
+                    console.log(txt.value)
+                    let eee = document.querySelector('[class="results"]');
+                    eee.appendChild(testing)
+                }
+
+            }
+        */
+    </script>
+</body>
+</html>

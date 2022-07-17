@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39 => 47</title>
+</head>
+<body> 
+    
+
+    <script>
+        let aa = 0;
+        let bb = 3;
+        let khalil = "khalil";
+        let my = ["ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+        console.log(my.slice(aa , bb + Array.isArray(my)).reverse())
+        console.log(my.slice(aa + Array.isArray(my), bb).reverse())
+        // console.log(my.slice(bb - Array.isArray(my)))
+        // console.log(my[bb - Array.isArray(my)][aa].slice())
+        console.log(my[bb - Array.isArray(my)].slice(aa, bb - Array.isArray(my)).concat(my[+Array.isArray(my)].slice(bb - Array.isArray(my))))
+        console.log(my[+Array.isArray(my)].slice(-bb + Array.isArray(my), -Array.isArray(my)).concat(my[+Array.isArray(my)].slice(-Array.isArray(my),).toUpperCase()))
+        // console.log(khalil.slice(1,4))
+        console.log(100 == "100");
+        console.log(100 < 1000);
+        console.log(110 > 100 > 10 < 20);
+        console.log(-10 == "-10");
+        console.log(+-50 <= +"-40");
+        console.log(+10 <= -"-40");
+        console.log(+"10" === 10);
+        console.log(+20 > false);
+        let a = 20,
+        b = 30,
+        c = 10,
+        num1 = 10,
+        num2 = 20;
+        
+        console.log(a < b &&  a > c || a > b);
+        console.log(a < b < a < c);
+        console.log(!(a > b) && !(a > b) && (a > c) && !(a < c))
+        console.log( num1 < num2);
+        console.log(num1 >! num2);
+        console.log(!(num1 > num2));
+        console.log(num1 != num2);
+        console.log(num1 !== num2);
+        console.log(typeof(num1) == typeof(num2));
+    </script>
+</body>
+</html>

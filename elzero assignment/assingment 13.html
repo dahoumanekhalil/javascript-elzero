@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>79 => 85</title>
+</head>
+<body>
+    <script>
+        // let number = {
+        //     name : "Elzero",
+        //     age : 38,
+        //     country : "Egypt",
+        //     fullDetails: function() {
+        //         return `My Name is ${this.name}, My age is ${this.age}, I live in ${this.country}`;
+        //     }
+        // }
+        // console.log(number.fullDetails())
+
+        ////////////////////////////////////////////////////////////
+
+        // let objMethodeOne = {
+        //     methodOne : "Methode One",
+        //     dz1 : function() {
+        //         return `${this.methodOne} 1`;
+        //     },
+        // };
+        // console.log(objMethodeOne);
+
+        // let objMethodeTwo = new Object({
+        //     methodTwo: "Methode Two",
+        //     dz2 : function() {
+        //         return `${this.methodTwo} 2`;
+        //     },});
+        
+        // console.log(objMethodeTwo);
+
+        // let objMethodeThree = Object.create({
+        //     methodThree: "Methode Three",
+        //     dz3: function() {
+        //         return `${this.methodeThree} 3`;
+        //     },
+        // });
+        // console.log(objMethodeThree);
+
+        // let objMethodeFour = Object.assign({}, {methodeFour:"Method Four", dz4:function(){return `${this.methodeFour} 4`}})
+        // console.log(objMethodeFour);
+
+        ////////////////////////////////////////////////////////////
+
+        // let a = 1;
+
+        // let threeNums = {
+        // b: 2,
+        // c: 3,
+        // d: 4,
+        // };
+
+        // let twoNums = {
+        // e: 5,
+        // f: 6,
+        // };
+
+        // let finalObject = Object.assign({},{a},threeNums,twoNums);
+
+        // console.log(finalObject);
+
+        ////////////////////////////////////////////////////////////
+
+        let myFavGames = {
+            "Trinity Universe": {
+                publisher: "NIS America",
+                price: 40,
+            },
+            "Titan Quest": {
+                publisher: "THQ",
+                bestThree: {
+                    one: "Immortal Throne",
+                    two: "Ragnarök",
+                    three: "Atlantis",
+                },
+                price: 50,
+            },
+            YS: {
+                publisher: "Falcom",
+                bestThree: {
+                    one: "Oath in Felghana",
+                    two: "Ark Of Napishtim",
+                    three: "origin",
+                },
+                price: 40,
+            },
+        };
+
+        // let objectLength = Object.keys(myFavGames).length;
+        // console.log(Object.keys(myFavGames)[1]);
+        console.log((Object.keys(myFavGames)[0()]));
+        // console.log(myFavGames.YS.publisher);
+
+        // for (let i = 0; i < objectLength; i++) {
+        //     console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+        //     console.log(`The Publisher Is ${Object.keys(myFavGames)[i].publisher}`);
+        //     console.log(`The Price Is ${Object.keys(myFavGames)[i].price}`);
+
+        // // Check If Nested Object Has Property (bestThree)
+        //     if (Object.keys(myFavGames)[i].bestThree !== undefined) {
+        //         console.log("- Game Has Releases");
+        //         console.log(`First => ${Object.keys(myFavGames)[i].bestThree.one}`);
+        //         console.log(`Second => ${Object.keys(myFavGames)[i].bestThree.two}`);
+        //         console.log(`Third => ${Object.keys(myFavGames)[i].bestThree.three}`);
+        //     }
+        //     console.log("#".repeat(20));
+        // }
+    </script>
+</body>
+</html>

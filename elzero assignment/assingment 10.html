@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57 => 63</title>
+</head>
+<body> 
+    
+
+    <script>
+        function showDetails (...a) {
+            if (a.length != 3 ) {
+                document.write("use 3 parameters")
+                return;
+            }
+            let x = 0,
+            y = 0,
+            z = 0,
+            age , name,bool;
+            for (let i = 0; i < 3; i++){
+                if (typeof(a[i]) === "string"){
+                        x++
+                        name = a[i];
+                    } else if (typeof(a[i]) === "number"){
+                        y++;
+                        age = a[i];
+                    } else if (typeof(a[i]) === "boolean"){
+                        z++;
+                        bool
+                        if (a[i] === false){
+                            bool = "you are not available for hire"
+                        } else {
+                            bool = "you are available for hire";
+                        }
+                    }
+            }
+            document.write()
+            if ((x != 1) ||(y != 1) || (z != 1)){
+                    return document.write("you must use name and age and boolean");
+                
+                } else {
+                    document.write(`hello ${name}, your age is ${age}, ${bool}`)
+                }
+        }
+
+        
+        showDetails(50,"ahmed", true);
+
+        //////////////////////////////////////////
+        function sayHello(theName, theGender = "") {
+            if (theGender === "Male"){
+                theGender = "Mr";
+            }else if (theGender === "Female"){
+                theGender = "Miss";
+            }
+            document.write(`hello ${theGender} ${theName}`)
+        }
+
+        sayHello("khalil");
+        //////////////////////////////////////
+        function calculate(firstnum = "undefined", secondNum = "undefined", operation = "add"){
+            let sum;
+            if(firstnum === "undefined" && secondNum === "undefined"){
+                return document.write("you must write numbers");
+            }else if(secondNum === "undefined"){
+                return document.write("second Number Not found");
+            };
+            if(operation === "add"){
+                sum = firstnum + secondNum;
+            }else if (operation === "sub"){
+                sum = firstnum - secondNum;
+            }else if(operation === "mult"){
+                sum = firstnum * secondNum;
+            }
+            document.write(sum)
+        }
+        calculate(2);
+
+        //////////////////////////////////
+
+        function ageInTime(theAge) {
+            let Mo, weeks, days, hour, min, sec;
+            if (typeof(theAge) === "number") {
+                if (theAge < 10 || theAge > 100){
+                    return console.log("age out of range!.");
+
+                } else{
+                    Mo = theAge * 12;
+                    weeks = Mo * 4;
+                    days = theAge * 365.25;
+                    hour = days * 24;
+                    min = hour * 60;
+                    sec = min * 60 ;
+                    
+                }
+            }else {
+                return console.log("you must write an number (age)!.")
+            }
+            console.log(`years ${theAge} `)
+            console.log(`months ${Mo} `)
+            console.log(`weeks ${weeks} `)
+            console.log(`days ${days} `)
+            console.log(`hours ${hour} `)
+            console.log(`minuts ${min} `)
+            console.log(`seconds ${sec} `)
+        }
+        ageInTime("days");
+
+        /////////////////////////////////////////
+
+        function createSelectBox(startYear, endYear){
+            let years;
+            if(typeof(startYear) !== "number" || typeof(endYear) !== "number") {
+                return document.write("you must write years, start year and end year.");
+            } else{
+                years = endYear - startYear;
+                document.write(`<select>`)
+                for (let i = startYear; i <= endYear; i++){
+                    console.log(i);
+                    document.write(`<option value="${i}"> ${i}</option>`);
+                }
+                document.write(`</select>`)
+            }
+        }
+        createSelectBox(2000, 2010)
+
+        /////////////////////////////////////////////
+
+        function multiply(...numbers){
+            let sum = 1;
+            for(let i = 0; i < numbers.length; i++){
+                if(typeof(numbers[i]) === "number"){
+                    sum *= numbers[i]
+                }
+            }
+            console.log(sum);
+        }
+
+        multiply("khalil",800 , 10, "ahmed")
+
+    </script>
+</body>
+</html>
