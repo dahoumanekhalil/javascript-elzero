@@ -171,101 +171,135 @@ let arr = ["khalil" ,"mohamed" , "dahoiumane" , "bodiaf"]
 [37]                break;}
 
 [71]    higher order functions - map (MAP){
-    Map (method creates a new array)
-    syntex => map(callBackFunction(Element, Index, Array) {}, thisArg)
-    Element => the current element being processed in the array
-    index => the index of the current element being processed iin the array
-    array => the current array
-
-    let mixFilter = mix.split("").map(function(num) {
-            return num * num;
-        }).join("")
-}
+[71]    Map (method creates a new array)
+[71]    syntex => map(callBackFunction(Element, Index, Array) {}, thisArg)
+[71]    Element => the current element being processed in the array
+[71]    index => the index of the current element being processed iin the array
+[71]    array => the current array
+[71]
+[71]    let mixFilter = mix.split("").map(function(num) {
+[71]            return num * num;
+[71]        }).join("")
+[71]    }
 
 [73]    filter (FILTER) {
-    filter method creates a new array
-    with all elements that pass the test implemented by the provided function
-    syntex filter(callBackFunction(Element, Index, Array) { }, thisArg)
-    Element => the current element being processed in the array
-    index => the index of the current element being processed iin the array
-    array => the current array
-
-    let mixFilter = mix.split("").filter(function(num) {
-            // return !isNaN(parseInt(num));
-            return Number.isInteger(parseInt(num));
-        }).join("")
-}
+[73]    filter method creates a new array
+[73]    with all elements that pass the test implemented by the provided function
+[73]    syntex filter(callBackFunction(Element, Index, Array) { }, thisArg)
+[73]    Element => the current element being processed in the array
+[73]    index => the index of the current element being processed iin the array
+[73]    array => the current array
+[73]
+[73]    let mixFilter = mix.split("").filter(function(num) {
+[73]            // return !isNaN(parseInt(num));
+[73]            return Number.isInteger(parseInt(num));
+[73]        }).join("")
+[73]    }
 
 
 [74]  mixing between map and filter 
-    let mix = "A13BS2ZX";
-    let mixFilter = mix.split("").filter(function(num) {
-        // return !isNaN(parseInt(num));
-        return Number.isInteger(parseInt(num));
-    }).map(function(num) {
-        return num * num;
-    }).join("")
+[74]    let mix = "A13BS2ZX";
+[74]    let mixFilter = mix.split("").filter(function(num) {
+[74]        // return !isNaN(parseInt(num));
+[74]        return Number.isInteger(parseInt(num));
+[74]    }).map(function(num) {
+[74]        return num * num;
+[74]    }).join("")
+[74]
+[74]    console.log(mixFilter)
 
-    console.log(mixFilter)
+[75]    reduce
+[75]    method executes a reducer function on each element of the array 
+[75]    resulting in a single output value.
+[75]
+[75]    sentax
+[75]    reduce (callBackFunc(Accumulator, current val, current index, source array) {} , initialvalue)
+[75]    - accumulator => the accumulated value preiously returned in the last invocation
+[75]    - current val => the current element being processed in the array
+[75]    - index => the index of the current element being processed in the array 
+[75]        starts from index 0 if an initialvalue is provided
+[75]        otherwise, it start from index 1.
+[75]    - array => the current array
 
-[75]reduce
-    method executes a reducer function on each element of the array 
-    resulting in a single output value.
-
-    sentax
-    reduce (callBackFunc(Accumulator, current val, current index, source array) {} , initialvalue)
-    - accumulator => the accumulated value preiously returned in the last invocation
-    - current val => the current element being processed in the array
-    - index => the index of the current element being processed in the array 
-        starts from index 0 if an initialvalue is provided
-        otherwise, it start from index 1.
-    - array => the current array
-
-[75]let nums = [10,20,15,30];
-    let add = nums.reduce(function ( acc, current, index, arr) {
-        console.log(`acc => ${acc}`);
-        console.log(`current element => ${current}`);
-        console.log(`current element index => ${index}`);
-        console.log(`array => ${arr}`);
-        console.log(acc+ current);
-        return acc + current;
-    }, 5);
-    console.log(add);
+[75]    let nums = [10,20,15,30];
+[75]    let add = nums.reduce(function ( acc, current, index, arr) {
+[75]        console.log(`acc => ${acc}`);
+[75]        console.log(`current element => ${current}`);
+[75]        console.log(`current element index => ${index}`);
+[75]        console.log(`array => ${arr}`);
+[75]        console.log(acc+ current);
+[75]        return acc + current;
+[75]    }, 5);
+[75]    console.log(add);
 
 [77]    forEach
-        method executes a provided function once for each array element 
-        syntex forEach(callBackFunction(element, index, array) {}, thisArg)
-        - element => the current element being processed in the array
-        - index => the index of the current element being processed in the array
-        - array => the current array
-        note
-        - doesnt return anything [undefined]
-        - break will not break the loop
+[77]    method executes a provided function once for each array element 
+[77]    syntex forEach(callBackFunction(element, index, array) {}, thisArg)
+[77]    - element => the current element being processed in the array
+[77]    - index => the index of the current element being processed in the array
+[77]    - array => the current array
+[77]    note
+[77]    - doesnt return anything [undefined]
+[77]    - break will not break the loop
+[77]    let allLi = document.querySelectorAll("ul li");
+[77]    allLi.forEach(function(ele){
+[77]    ele.oneclick = function (){
+[77]    console.log(this)
+[77]    };
+[77]    });
 
-        let allLi = document.querySelectorAll("ul li");
 
-        allLi.forEach(function(ele){
-            ele.oneclick = function (){
-                console.log(this)
-            };
-        });
+[128]   Array.from(iterable, mapfunction, this) => working with variable, string numbers, set, using the map function, arrow function, shorten the method + use arguments
+[128]   Array.from("") => to make var in new array like >> osama => ["o","s","a","m","a"]
+[128]   Array.from("", function (n) {})
+[128]   Array.from ("", (n) => n + n)
+[128]   let arr = []
+[128]   let newSet = new set(iterable)
+[128]   Array.from(newSet) => to make newSet in array
+[128]   function testargs() {return arguments;} => to make it as arguments
+[128]   function testargs() {return Array.from(arguments)}; => tomake arguments as array
+[128]   testargs("osama","ahmed","sayed") => to make arguments as array
+[128]   console.log([...new Set(myArray)]) => to make (Set) myArray in array 
+
+[129]   Array.copyWithin(target, start(optional), end(optional)) => copy part of an array to another location in the same array
+
+[130]   Array.some(callbackfunctin (element, index, array), this argument) => check if element exists in array or not 
+[130]   when callbackfucntion be back true everything with stop and it will return true and will ignore all other results, it work with arrays 
+[130]   let checkNumber = arr.some(function (e) {
+[130]   return e >= this.min && e <= this.max;
+[130]   }, object) => object = this    
+
+[131]   Array.every(callbackfunctin(element,index,array),this argument) => check if cundition of function true with all elements in array or not if work it will return true if not it will retrurn false
+[131]   callbackfunctin => functin to run on every element on the array
+[131]   when callbackfucntion be back true everything with stop and it will return true and will ignore all other results, it work with arrays 
+[131]   when callbackfunctin return true on all elements in array array.every will return true
+[131]   console.log(Array.from(Object.keys(obj),(e) => +e)) => to make keys of object in array and make values of array as numbers
+[131]   console.log(Object.keys(obj).map((e) => +e)) => to make keys of object in array and make values of array as numbers
+
+[132]   spread operator => ...iterable
+[132]   ..."osama" => o s a m a
+[132]   [..."osama"] => to make osama in array = ["o","s","a","m","a"]
+[132]   [...arr1,...arr2] => to concat arrays
+[132]   {...obj1, ...obj2} => to concat objects
 
 [79]    objects {
-    let test = "age";
+[79]    let test = "age";
+[79]
+[79]    let user = {
+[79]        properties
+[79]        name: "khalil",
+[79]        age: 24,
+[79]        "living country": "algeria",
+[79]        methods
+[79]        talk: function() {
+[79]            return `hello`;argum
+[79]        },
+[79]    };
+[79]
+[79]    console.log(user.name);
+[79]    console.log(user.talk());
 
-    let user = {
-        properties
-        name: "khalil",
-        age: 24,
-        "living country": "algeria",
-        methods
-        talk: function() {
-            return `hello`;
-        },
-    };
 
-    console.log(user.name);
-    console.log(user.talk());
 [80]console.log(user["living country"]);
 [80]console.log(user[test]);
 
@@ -390,7 +424,7 @@ events simulation
 [104]   setTimeout(function,millseconds,...parameters) => to make time fo do function after (millseconds) (wait until that (millseconds) and do that function)
 [104]   clearTimeout(var) => to make setTimeout() stop and var is name of setTimeout with var its look like that {let var = setTimeout()}
 
-[105]   setInterval(fucntion, millseconds,...parameters) => to make counter every (millseconds) to that function
+[105]   setInterval(function, millseconds,...parameters) => to make counter every (millseconds) to that function
 [105]   clearInterval(var) => to make setInterval() stop and var is name of setInterval with var its look like that {let var = setInterval()}
 
 [106]   -location
@@ -455,9 +489,80 @@ events simulation
 [113]   - - -window.sessionStorage.removeItem("key") 
 
 */
+
+/*
+[115]   let friends = ["1", "2", "3", ["4", "5", ["6", "7"]]]
+[115]   let [a, b, c, d] = friends => a = "1"; b = "2"; c = "3"; d = "4";
+
+[116]   let [, , , [a , , [, b]]] = friends
+
+[117]  for swapping variables
+[117]   [a , b] = [b , a]
+
+[118]   const user = {
+[118]   name: "test",
+[118]   age: 118,
+[118]   from: "algeria",
+[118]   job: "frontEnd"
+[118]   }
+
+[118]   ({a, b, c, d} = user) => بالترتيب 
+[118]   const {name, age, job} = user; => بالاسم وليس بالترتيب
+
+[119]   to rename variable in destructuring 
+[119]   const {name: a, age , from : b, job: c} = user
+[119]   name of new vaiables is [a, b, c] and you can use the reall names [name, age, from, job]
+
+[123]   -set([]) => to give you unique values and delete reppete values
+[123]   --size => to know size of set
+[123]   --add() => to add new value to set
+[123]   --delete() => to delete value from set
+[123]   --clear() => to clear set (delete all values)
+[123]   --has(val) => if this set has this value (val) ?
+
+[124]   -weakSet({}) => working with just objects 
+[124]   --add() => to add new object to weakSet
+[124]   --constructor
+[124]   --delete() => to delete object from weakSet
+[124]   --has() => this weakSet has this object ? 
+
+[125]   -Map() => its look like object you can with map set any key you want to value
+[125]   --set( , ) => to set new value inside map 
+[125]   --size => size of map
+[125]   Object.create(null); => to create new object with null propeties
+[125]   new Map() => to create new object with null propertis
+
+[126]   map methods
+[126]   let myMap = new Map([
+[126]   [10 , "number"],
+[126]   ["name", "string"],
+[126]   [function test() {}, "function"]
+[126]   ])
+[126]   
+[126]   --set(key," ") => to create new key in map
+[126]   --get(key) => to  get map (by key)
+[126]   --size => to get size of map
+[126]   --delete() => delete key from map
+[126]   --clear() => to clearing map
+[126]   --has(key) => if that key inside map or not
+
+[127]   weakMap => weakMap allow garbage collector to do its task but not map
+[127]   weakMap => لا تظهر المعلومات المحذوفة من الذاكرة الرام 
+[127]   weakMap its work just with objects
+[127]   if you will work with memory it delete (work with gabage collector) before so work with weakMap if not work with map same thing with set and weakSet
+
+
+
+
+*/
 /*for searching{
     -execution context
     -lexical environment
     window.open window features
     pushState() + replaceState
+    weakSet use cases
+[125]    object prototype 
 }*/
+
+
+// chartjs

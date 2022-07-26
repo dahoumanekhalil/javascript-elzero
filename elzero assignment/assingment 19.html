@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123 => 133</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // let setOfNumbers = new Set();
+        // setOfNumbers.add(10).add(20).add(setOfNumbers.size);
+        // console.log(setOfNumbers);
+        // sulotion 1 => console.log([...setOfNumbers][setOfNumbers.size - 1])
+
+        // sulotion 2 => console.log(Array.from(setOfNumbers)[setOfNumbers.size - 1])
+
+        // output [
+        //     Set(3) {10, 20, 2}
+        //     2
+        // ]
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+
+        // sulotion 1 => let mySet = new Set(myFriends.sort());
+
+        // sulotion 2 => console.log([...new Set(myFriends)].sort())
+        // console.log(mySet)
+
+        // ourput ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        // let myInfo = {
+        //     username: "Osama",
+        //     role: "Admin",
+        //     country: "Egypt",
+        // };
+
+        // let myMap = new Map([]);
+
+        // for(let i = 0; i < Object.keys(myInfo).length; i++) {
+        //  myMap.set(Object.keys(myInfo)[i] , myInfo[Object.keys(myInfo)[i]])
+        // }
+        // console.log(myMap)
+        // console.log(myMap.size)
+        // console.log(myMap.has("role"))
+
+        // ourput [
+        //     Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+        //     3
+        //     true
+        // ]
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let theNumber = 100020003000;
+        // console.log(+[...new Set(theNumber.toString())].map((e) => e > 0 ? e:"").join(""))
+        
+        // ourput [123]
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let theName = "Elzero";
+
+        // console.log(Array.from(theName))
+
+        // console.log(theName.split(""))
+
+        // console.log([...theName])
+
+        // console.log(new Array(...theName))
+
+        // console.log(Object.assign([],theName))
+
+        // ourput ['E', 'l', 'z', 'e', 'r', 'o']
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+        // let num = 0
+        // for (let i = 0; i < chars.length; i++){
+        //     if(typeof(chars[i]) == "number"){
+        //         num++
+        //     }
+        // }
+        // chars.copyWithin(num)
+        // console.log(chars)
+
+        // // output
+        // // ['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
+
+        // let chars = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+        // chars.sort()
+        // let num = 0
+        // for (let i = 0; i < chars.length; i++){
+        //     if(typeof(chars[i]) == "number"){
+        //         num++
+        //     }
+        // }
+        // chars.copyWithin(0,num,chars.length - 1)
+
+        // console.log(chars)
+
+        // // output
+        // // ['A', 'B', 'C', 'D', 'E', 'B', 'C', 'D', 'E']
+
+        // let chars = ["Z", "Y", "A", "D", "E", 10, 1];
+        // let num = 0
+        // for (let i = 0; i < chars.length; i++){
+        //     if(typeof(chars[i]) == "number"){
+        //         num++
+        //     }
+        // }
+        // chars.copyWithin(num * 2,num,-num)
+        // chars.copyWithin(num,0,num)
+        // console.log(chars)
+        
+        // // output
+        // // ["Z", "Y", "Z", "Y", "A", "D", "E"]
+
+        ///////////////////////////////////////////////////////////////////////
+
+        // let numsOne = [1, 2, 3];
+        // let numsTwo = [4, 5, 6];
+        // 1 =>
+        // console.log((numsOne).concat(numsTwo))
+        // 2 =>
+        // console.log([...numsOne,...numsTwo])
+        // 3 =>
+        // console.log(...new Set([[...numsOne,...numsTwo]]))
+        // console.log([...new Set([...numsOne,...numsTwo])])
+        // 4 =>
+        // let num = numsOne
+        // for(let i = 0; i < numsTwo.length; i++){
+        //     num.push(numsTwo[i])
+        // }
+        // console.log(num)
+        // 5 =>
+        // console.log(Array.from([...numsOne,...numsTwo]))
+        // 6 =>
+        // console.log(new Array(...numsOne,...numsTwo))
+        // 7 =>
+        // numsOne.push(...[...numsTwo])
+        // console.log(numsOne)
+
+        ///////////////////////////////////////////////////////////////////////
+        
+        // let n1 = [10, 30, 10, 20];
+        // let n2 = [30, 20, 10];
+
+        // console.log(Math.max(...n1) * [...n1,...n2].length)
+        // console.log(new Set([n1]).size * Math.max(...n1) * [...n1,...n2].length)
+
+        ///////////////////////////////////////////////////////////////////////
+
+    </script>
+</body>
+</html>
